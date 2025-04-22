@@ -1,0 +1,365 @@
+/* BookingConfirmation.css - Modern styling for booking confirmation page */
+
+:root {
+  --primary-color: #f05537;
+  --primary-dark: #d93b1a;
+  --secondary-color: #2c3e50;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #6c757d;
+  --white: #ffffff;
+  --black: #000000;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Main container */
+.bg-white {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+/* Header styles */
+.bg-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+}
+
+.bg-primary .text-5xl {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.bg-primary h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bg-primary p {
+  opacity: 0.9;
+}
+
+.bg-primary .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.25rem 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Content sections */
+.p-6 {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .p-6 {
+    padding: 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Section titles */
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* Info cards */
+.bg-gray-50 {
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.space-y-4 > * {
+  margin-bottom: 1rem;
+}
+
+.space-y-4 > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon with text layout */
+.flex {
+  display: flex;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+/* Text styles */
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-500 {
+  color: #718096;
+}
+
+.text-gray-600 {
+  color: #4a5568;
+}
+
+.text-gray-700 {
+  color: #2d3748;
+}
+
+.text-gray-800 {
+  color: #1a202c;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+/* Payment details section */
+.border-t {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.border-gray-200 {
+  border-color: #e2e8f0;
+}
+
+.border-gray-300 {
+  border-color: #cbd5e0;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Status indicators */
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.h-3 {
+  height: 0.75rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.bg-green-500 {
+  background-color: #10b981;
+}
+
+.bg-yellow-500 {
+  background-color: #f59e0b;
+}
+
+.bg-red-500 {
+  background-color: #ef4444;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.text-green-500 {
+  color: #10b981;
+}
+
+.text-yellow-500 {
+  color: #f59e0b;
+}
+
+/* Next steps and buttons */
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.bg-primary, .text-white {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.hover\\:bg-primary-dark:hover {
+  background-color: var(--primary-dark);
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: var(--border-radius);
+}
+
+.transition-colors {
+  transition: var(--transition);
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* Error state */
+.bg-red-50 {
+  background-color: #fef2f2;
+}
+
+.border-red-200 {
+  border-color: #fecaca;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+/* Print styles */
+@media print {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bg-white {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .bg-primary {
+    background-color: #f8f9fa !important;
+    color: #000000 !important;
+    padding: 1rem;
+  }
+  
+  .text-white, .text-primary {
+    color: #000000 !important;
+  }
+  
+  .flex-wrap {
+    display: none;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .flex-wrap {
+    justify-content: center;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .p-6 {
+    padding: 1rem;
+  }
+} 

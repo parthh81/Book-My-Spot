@@ -1,0 +1,222 @@
+/* navbar.css - Styles for the common Navbar component */
+
+:root {
+  --primary-color: #f05537;
+  --primary-hover: #e04525;
+  --secondary-color: #334155;
+  --light-color: #f8f9fa;
+  --border-color: #dee2e6;
+  --text-color: #333;
+  --muted-text: #6c757d;
+  --dropdown-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --navbar-height: 64px;
+  --transition: all 0.3s ease;
+}
+
+/* Header styles */
+.header_section {
+  width: 100%;
+  will-change: transform;
+  z-index: 2000;
+  transition: var(--transition);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.header_section.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.header_section .navbar {
+  height: var(--navbar-height);
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: var(--transition);
+}
+
+.header_section.scrolled .navbar {
+  height: 56px;
+}
+
+/* Brand/Logo styles */
+.navbar-brand {
+  font-size: 1.25rem !important;
+  transition: transform 0.3s ease;
+}
+
+.header_section.scrolled .navbar-brand {
+  transform: scale(0.95);
+}
+
+/* Nav links */
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Search styles */
+.input-group-text {
+  border-right: none;
+  background-color: #fff;
+}
+
+.form-control {
+  border-left: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--border-color);
+}
+
+/* User dropdown styles */
+.dropdown-menu {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--dropdown-shadow);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.dropdown-menu.show {
+  animation: fadeInDown 0.2s ease-out;
+}
+
+.dropdown-header {
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(240, 85, 55, 0.05);
+}
+
+.dropdown-item:active {
+  background-color: rgba(240, 85, 55, 0.1);
+  color: var(--text-color);
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* User avatar */
+.rounded-circle {
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* Content offset for fixed navbar */
+.content-wrapper {
+  padding-top: calc(var(--navbar-height) + 16px);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+/* Ensure page content starts below navbar */
+.browse-events-page .content-wrapper {
+  padding-top: var(--navbar-height);
+}
+
+/* Add padding to events-management container */
+.events-management {
+  padding-top: var(--navbar-height);
+}
+
+/* Add specific padding for profile container */
+.profile-container {
+  padding-top: calc(var(--navbar-height) + 16px) !important;
+}
+
+/* Mobile styles */
+@media (max-width: 992px) {
+  .header_section .navbar {
+    height: auto;
+    min-height: 56px;
+  }
+  
+  .navbar-collapse {
+    padding: 16px 0;
+    background-color: #fff;
+  }
+  
+  .nav-link {
+    padding: 10px 16px;
+  }
+  
+  .dropdown-menu {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-menu.show {
+    animation: none;
+  }
+  
+  .dropdown-item {
+    padding: 12px 24px;
+  }
+  
+  .content-wrapper {
+    padding-top: 80px;
+  }
+  
+  /* Increase padding for profile page on mobile */
+  .profile-container {
+    padding-top: 80px !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+/* Helper classes */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Fixed positioning helper class */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+} 

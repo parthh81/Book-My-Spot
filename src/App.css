@@ -1,0 +1,372 @@
+/* Override conflicting styles from AdminLTE */
+
+/* Global Layout Structure - Fix for the AdminLTE conflicts */
+:root {
+  --sidebar-width: 250px;
+  --navbar-height: 60px;
+  --primary-color: #f05537;
+  --dark-color: #1e293b;
+  --light-color: #f8f9fa;
+}
+
+/* Reset default Vite styles that conflict with AdminLTE */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Fix app-sidebar layout */
+.app-sidebar {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.app-sidebar.d-none {
+  transform: translateX(-100%);
+}
+
+.app-sidebar.open {
+  transform: translateX(0);
+}
+
+.app-main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  padding: 20px;
+  margin-top: 50px; /* Match header height */
+  min-height: calc(100vh - 50px); /* Subtract header height */
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  background-color: #f5f7fa;
+}
+
+.app-sidebar.collapsed + .app-main {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* When sidebar is hidden */
+.app-sidebar.d-none + .app-main {
+  margin-left: 0;
+  width: 100%;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+/* Fix card styling conflicts */
+.card {
+  padding: 0 !important; /* Override Vite's padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: 500;
+  padding: 15px 20px !important;
+}
+
+.card-body {
+  padding: 20px !important;
+}
+
+/* Fix table responsiveness */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Add Event Form Styling */
+.add-event-form .card {
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.add-event-form .form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.add-event-form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+}
+
+.add-event-form .btn-primary {
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+/* Responsive fixes */
+@media (max-width: 992px) {
+  .app-main {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .app-sidebar.open {
+    display: block !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Fix avatar display */
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Badge styles */
+.badge {
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  border-radius: 30px;
+}
+
+/* Global Layout Styles */
+:root {
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f8ff;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #f5f8ff;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #f5f8ff;
+}
+
+/* App Layout Structure */
+.app-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  z-index: 1030;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Styles */
+.sidebar-brand {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 2px 10px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-menu .nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu .nav-link.active {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.sidebar-menu .nav-header {
+  font-size: 12px;
+  padding: 5px 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Progress Bars */
+.progress {
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Form Styling */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #e04527;
+  border-color: #e04527;
+}
+
+/* Avatar Styles */
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+}
+
+.avatar-md {
+  width: 48px;
+  height: 48px;
+}
+
+/* Quick Links Styling */
+.quick-link-card {
+  transition: all 0.3s ease-in-out;
+  border: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.quick-link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.quick-link-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.quick-link-card:hover .quick-link-icon {
+  transform: scale(1.1);
+}
+
+.quick-link-title {
+  transition: color 0.3s ease-in-out;
+}
+
+.quick-link-card:hover .quick-link-title {
+  color: #f05537;
+}
+
+/* Add these styles at the end of the file to ensure forms use full width */
+
+/* Fix for the add event form specifically - use more targeted selectors */
+.add-event-container .w-100 {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Form container full width - more targeted */
+.add-event-container .container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Fix any row constraints - more targeted */
+.add-event-container .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+
+/* Force the column to take full width - more targeted */
+.add-event-container .col-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+/* Fix search and filter styling */
+.events-table-container .input-group {
+  width: 100%;
+}
+
+.events-table-container .form-select {
+  width: auto !important;
+  min-width: 120px !important;
+  max-width: none !important;
+}
+
+.events-table-container .d-flex .form-select {
+  flex: 1 !important;
+}
+
+/* Ensure input fields have proper width */
+.add-event-container .form-control,
+.add-event-container .form-select,
+.add-event-container .input-group {
+  width: 100% !important;
+}
+
+/* Fix for event form elements */
+.add-event-container textarea.form-control {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Event Cards Styling */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.event-card-header {
+  height: 160px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.event-card-footer .btn {
+  transition: all 0.2s ease;
+}
+
+.event-card-footer .btn:hover {
+  transform: translateY(-2px);
+}

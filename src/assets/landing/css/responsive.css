@@ -1,0 +1,232 @@
+/* Enhanced Responsive Styles */
+
+/* Base Container */
+.container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.container-fluid {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Remove Default Bootstrap Row Margin */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Hero Section Full Width & Full Height */
+.hero_section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+}
+
+/* Reduce Extra Padding in Slider */
+.slider_section {
+  padding: 45px 0 100px 0;
+}
+
+/* Ensure Full Width in Info Section */
+.info_section .row > div {
+  width: 100%;
+}
+
+/* Fix Hidden Navigation Button */
+.quote_btn-container a {
+  display: block;
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+  .display-4 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .display-4 {
+    font-size: 2.25rem !important;
+  }
+  
+  .hero_section {
+    min-height: 70vh;
+  }
+  
+  .search-container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem !important;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+  
+  .hero_section {
+    min-height: 60vh;
+    text-align: center;
+  }
+  
+  .search-container .row {
+    row-gap: 0.75rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .how_it_works .icon-circle {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .how_it_works .icon-circle svg {
+    font-size: 24px !important;
+  }
+  
+  /* Stack CTA buttons on small screens */
+  .cta_section .d-flex {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .cta_section .btn {
+    width: 100%;
+  }
+  
+  /* Footer responsiveness */
+  .footer h5 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 1.75rem !important;
+  }
+  
+  .badge {
+    font-size: 0.7rem !important;
+  }
+  
+  .hero_section {
+    min-height: 50vh;
+  }
+  
+  .search-container {
+    padding: 1rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  /* Smaller card padding */
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* Adjust venue card layout */
+  .venue-card .card-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .venue-card .btn {
+    width: 100%;
+  }
+  
+  /* Testimonial adjustments */
+  .testimonial-card {
+    padding: 1rem !important;
+  }
+  
+  /* How It Works section */
+  .how_it_works .icon-circle {
+    width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .how_it_works .icon-circle svg {
+    font-size: 20px !important;
+  }
+  
+  /* Footer spacing */
+  .footer .row > div {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Fix navbar on mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .container-fluid {
+    position: relative;
+  }
+}
+
+/* Animations */
+.animate__animated {
+  animation-duration: 0.8s;
+}
+
+/* Fix image responsiveness */
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Service cards equal height for consistent appearance */
+@media (min-width: 768px) {
+  .service-card, .venue-card, .testimonial-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card .card-body,
+  .venue-card .card-body,
+  .testimonial-card .card-body {
+    flex: 1 1 auto;
+  }
+}
+
+/* Improve spacing in how it works section */
+@media (max-width: 767px) {
+  .how_it_works .col-md-3:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
